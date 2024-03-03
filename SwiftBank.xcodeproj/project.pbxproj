@@ -24,6 +24,7 @@
 		03E5D8FC2B45E52F00B9BC9A /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5D8FB2B45E52F00B9BC9A /* HomeEndpoint.swift */; };
 		03E5D8FE2B45E64800B9BC9A /* HomeNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5D8FD2B45E64800B9BC9A /* HomeNetworkingService.swift */; };
 		03E5D9002B45F3C800B9BC9A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5D8FF2B45F3C800B9BC9A /* HomeView.swift */; };
+		6A96983C78E9EAF0B0D374F5 /* Pods_SwiftBank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6439964511C7B3F2363D7820 /* Pods_SwiftBank.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		03E5D8FB2B45E52F00B9BC9A /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
 		03E5D8FD2B45E64800B9BC9A /* HomeNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkingService.swift; sourceTree = "<group>"; };
 		03E5D8FF2B45F3C800B9BC9A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		425E15FE99D77BF66CCC9362 /* Pods-SwiftBank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBank.debug.xcconfig"; path = "Target Support Files/Pods-SwiftBank/Pods-SwiftBank.debug.xcconfig"; sourceTree = "<group>"; };
+		6439964511C7B3F2363D7820 /* Pods_SwiftBank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A2536E1066550DF11CA5A5 /* Pods-SwiftBank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBank.release.xcconfig"; path = "Target Support Files/Pods-SwiftBank/Pods-SwiftBank.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A96983C78E9EAF0B0D374F5 /* Pods_SwiftBank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 			children = (
 				03BD4AA82B3CB26000341CE2 /* SwiftBank */,
 				03BD4AA72B3CB26000341CE2 /* Products */,
+				38189873D75C5989FFC80D3C /* Pods */,
+				620CAF8B56A00BEE3BFD1607 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +217,24 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		38189873D75C5989FFC80D3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				425E15FE99D77BF66CCC9362 /* Pods-SwiftBank.debug.xcconfig */,
+				B7A2536E1066550DF11CA5A5 /* Pods-SwiftBank.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		620CAF8B56A00BEE3BFD1607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6439964511C7B3F2363D7820 /* Pods_SwiftBank.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03BD4AB42B3CB26400341CE2 /* Build configuration list for PBXNativeTarget "SwiftBank" */;
 			buildPhases = (
+				2BA3982C14CA0BAF8DD6A70B /* [CP] Check Pods Manifest.lock */,
 				03BD4AA22B3CB26000341CE2 /* Sources */,
 				03BD4AA32B3CB26000341CE2 /* Frameworks */,
 				03BD4AA42B3CB26000341CE2 /* Resources */,
@@ -274,6 +300,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA3982C14CA0BAF8DD6A70B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftBank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03BD4AA22B3CB26000341CE2 /* Sources */ = {
@@ -417,6 +468,7 @@
 		};
 		03BD4AB52B3CB26400341CE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425E15FE99D77BF66CCC9362 /* Pods-SwiftBank.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +500,7 @@
 		};
 		03BD4AB62B3CB26400341CE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A2536E1066550DF11CA5A5 /* Pods-SwiftBank.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
