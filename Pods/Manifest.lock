@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 24f9a0a98781fa41399c68a8d54beff195cbcf85
+PODS:
+  - SBLoan (1.0.1)
+
+DEPENDENCIES:
+  - SBLoan
+
+SPEC REPOS:
+  https://github.com/yurastico/SBLoan.git:
+    - SBLoan
+
+SPEC CHECKSUMS:
+  SBLoan: 7687cd38e570efe773463253cf08b524bfb71a26
+
+PODFILE CHECKSUM: f1c8bbdc77819d6879baa93af073aa5de9e739ea
 
 COCOAPODS: 1.15.2

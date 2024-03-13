@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SBLoan
 struct LoanView: View {
     
     // MARK: - UI Components
@@ -35,6 +35,9 @@ struct LoanView: View {
                         Spacer()
                     }
                 )
+                .background {
+                    NavigationLink(destination: SBLoanView(), label: { EmptyView() })
+                }
         }
 
     }
